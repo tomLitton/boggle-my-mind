@@ -3,7 +3,7 @@ package board_test
 import (
     "testing"
     "golang.org/x/exp/slices"
-     "github.com/thomaslitton/boggle-my-mind/pkg/board"
+     "github.com/tomlitton/boggle-my-mind/pkg/board"
 )
 
 func TestAdjacentCellsWith2X2(t *testing.T) {

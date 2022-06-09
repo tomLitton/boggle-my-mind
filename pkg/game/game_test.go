@@ -6,10 +6,10 @@ import (
 
     "github.com/golang/mock/gomock"
 
-    "github.com/thomaslitton/boggle-my-mind/mocks"
-    "github.com/thomaslitton/boggle-my-mind/pkg/game"
-    "github.com/thomaslitton/boggle-my-mind/pkg/word"
-    "github.com/thomaslitton/boggle-my-mind/pkg/board"
+    "github.com/tomlitton/boggle-my-mind/mocks"
+    "github.com/tomlitton/boggle-my-mind/pkg/game"
+    "github.com/tomlitton/boggle-my-mind/pkg/word"
+    "github.com/tomlitton/boggle-my-mind/pkg/board"
 )
 
 var WORD1 = word.Word {

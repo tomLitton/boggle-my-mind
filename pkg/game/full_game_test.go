@@ -7,9 +7,9 @@ import(
     "strings"
     "log"
 
-    "github.com/thomaslitton/boggle-my-mind/pkg/game"
-    "github.com/thomaslitton/boggle-my-mind/pkg/word"
-    "github.com/thomaslitton/boggle-my-mind/pkg/board"
+    "github.com/tomlitton/boggle-my-mind/pkg/game"
+    "github.com/tomlitton/boggle-my-mind/pkg/word"
+    "github.com/tomlitton/boggle-my-mind/pkg/board"
 )
 
 func TestFullGame(t *testing.T) {
@@ -43,10 +43,6 @@ func TestFullGame(t *testing.T) {
     if err != nil {
         t.Fatalf("Failed to process game: %v", err)
     }
-
-//     if len(words) != len(validWords) {
-//         t.Fatalf("Unexpected number of words found: wanted %d got %d", len(validWords), len(words))
-//     }
 
     for _, w := range validWords {
         if !containsWords(words, w) {

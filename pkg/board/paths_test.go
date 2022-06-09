@@ -2,8 +2,8 @@ package board_test
 
 import (
     "testing"
-    "github.com/thomaslitton/boggle-my-mind/pkg/board"
-    "github.com/thomaslitton/boggle-my-mind/pkg/word"
+    "github.com/tomlitton/boggle-my-mind/pkg/board"
+    "github.com/tomlitton/boggle-my-mind/pkg/word"
 )
 
 func Test2X2(t *testing.T) {

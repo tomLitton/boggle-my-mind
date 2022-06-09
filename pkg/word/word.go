@@ -1,13 +1,12 @@
 package word
 
-//go:generate mockgen -destination=../../mocks/mock_word.go -package=mocks github.com/thomaslitton/boggle-my-mind/pkg/word WordVerifier
+//go:generate mockgen -destination=../../mocks/mock_word.go -package=mocks github.com/tomlitton/boggle-my-mind/pkg/word WordVerifier
 
 import (
     "os"
     "strings"
     "errors"
     "fmt"
-    "log"
 
     "golang.org/x/exp/slices"
 )
@@ -15,12 +14,14 @@ import (
 type Path []int
 
 type WordVerifier interface {
+    // Technically this implementation can't fail, but one possible future implementation is to call an API
+    // to verify the word.  In that case, an error might be returned.
     Verify(Word) (bool, error)
 }
 
 type Word struct {
-  Path Path
-  Value string
+  Path Path `json:"path"`
+  Value string `json:"word"`
 }
 
 type WordVerifierImpl struct {
@@ -44,8 +45,6 @@ func (v WordVerifierImpl) Verify(word Word) (bool, error) {
 }
 
 func parseDictionary(dictionaryFile string) ([]string, error) {
-    wd, _ := os.Getwd()
-    log.Printf("wd: %v", wd)
     contents, err := os.ReadFile(dictionaryFile)
     if err != nil {
         return nil, err

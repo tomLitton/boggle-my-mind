@@ -6,8 +6,8 @@ import (
     "fmt"
     "strings"
 
-    "github.com/thomaslitton/boggle-my-mind/pkg/board"
-    "github.com/thomaslitton/boggle-my-mind/pkg/word"
+    "github.com/tomlitton/boggle-my-mind/pkg/board"
+    "github.com/tomlitton/boggle-my-mind/pkg/word"
 )
 
 func TestBoards(t *testing.T) {
@@ -29,6 +29,7 @@ func TestBoards(t *testing.T) {
         words = append(words, w)
     }
 
+    // ensure the possible words at least contains all the valid words for this board.
     for _, w := range validWords {
         if !containsWords(words, w) {
             t.Fatalf("word not found %s", w)

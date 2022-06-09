@@ -1,9 +1,9 @@
 package board
 
-//go:generate mockgen -destination=../../mocks/mock_board.go -package=mocks github.com/thomaslitton/boggle-my-mind/pkg/board BoardWalker
+//go:generate mockgen -destination=../../mocks/mock_board.go -package=mocks github.com/tomlitton/boggle-my-mind/pkg/board BoardWalker
 
 import (
-    "github.com/thomaslitton/boggle-my-mind/pkg/word"
+    "github.com/tomlitton/boggle-my-mind/pkg/word"
 )
 
 // Note:  Board should be immutable once created.

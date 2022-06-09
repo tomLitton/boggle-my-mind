@@ -3,7 +3,7 @@ package board
 import (
     "golang.org/x/exp/slices"
 
-    "github.com/thomaslitton/boggle-my-mind/pkg/word"
+    "github.com/tomlitton/boggle-my-mind/pkg/word"
 )
 
 var adjacentIndexes [][]int

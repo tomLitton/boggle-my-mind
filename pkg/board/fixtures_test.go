@@ -1,7 +1,7 @@
 package board_test
 
 import (
-    "github.com/thomaslitton/boggle-my-mind/pkg/word"
+    "github.com/tomlitton/boggle-my-mind/pkg/word"
 )
 
 var PATHS2X2 = []word.Path {
